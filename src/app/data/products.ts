@@ -1,80 +1,169 @@
-export const products = [
+export type Product = {
+  id: string;
+  name: string;
+  category: string;
+  price: string;
+  description: string;
+  specs: {
+    material: string;
+    size: string;
+    application: string;
+    brand?: string;
+  };
+  image: string;
+};
+
+export const categories = [
+  "Fasteners",
+  "Industrial Tools",
+  "Pipes & Fittings",
+  "Construction Materials",
+  "Hardware Accessories"
+];
+
+export const products: Product[] = [
+  // Fasteners
   {
-    id: "1083",
-    name: "SALASAR Cast Iron Non-Return Valve PN 1.0 (Flanged)",
-    description: "Swing Type with Nitrile Rubber Disc Facing, Flanged Ends to IS 1538",
-    hsnCode: "84813000",
-    category: "Valves",
-    image: "/images/cast-iron-valve.png",
-    specs: [
-      { sizeInch: "2", nbMm: "50", weightKg: "5.090", pn: "8", lMm: "200", rateInr: "39,725" },
-      { sizeInch: "2 1/2", nbMm: "65", weightKg: "6.529", pn: "10", lMm: "250", rateInr: "44,616" },
-      { sizeInch: "3", nbMm: "80", weightKg: "9.611", pn: "12", lMm: "300", rateInr: "56,279" }
-    ]
+    id: "f-001",
+    name: "High Tensile Hex Bolts",
+    category: "Fasteners",
+    price: "₹150 - ₹500 / Kg",
+    description: "Premium grade high tensile hex bolts designed for heavy industrial machinery and structural joints.",
+    specs: {
+      material: "Alloy Steel / Stainless Steel",
+      size: "M6 to M36",
+      application: "Construction, Automotive, Machinery",
+      brand: "Salasar Fasteners"
+    },
+    image: "/images/fastener.jpg"
   },
   {
-    id: "1083A",
-    name: "SALASAR Cast Iron Non-Return Valve PN 1.6 (Flanged)",
-    description: "Swing Type with Nitrile Rubber Disc Facing, Flanged Ends to IS 1538",
-    hsnCode: "84813000",
-    category: "Valves",
-    image: "/images/cast-iron-valve.png",
-    specs: [
-      { sizeInch: "2", nbMm: "50", weightKg: "6.059", pn: "8", lMm: "200", rateInr: "47,056" },
-      { sizeInch: "2 1/2", nbMm: "65", weightKg: "8.031", pn: "10", lMm: "250", rateInr: "51,293" },
-      { sizeInch: "3", nbMm: "80", weightKg: "9.900", pn: "12", lMm: "300", rateInr: "59,236" }
-    ]
+    id: "f-002",
+    name: "Stainless Steel Nyloc Nuts",
+    category: "Fasteners",
+    price: "₹200 - ₹800 / Box",
+    description: "Vibration-resistant nyloc nuts offering secure fastening in high-stress environments.",
+    specs: {
+      material: "SS 304 / SS 316",
+      size: "M3 to M24",
+      application: "Automotive, Aerospace, Manufacturing"
+    },
+    image: "/images/nut.jpg"
+  },
+  
+  // Industrial Tools
+  {
+    id: "t-001",
+    name: "Heavy Duty Angle Grinder",
+    category: "Industrial Tools",
+    price: "Get Latest Price",
+    description: "Professional grade 850W angle grinder for cutting and grinding metal, concrete, and masonry.",
+    specs: {
+      material: "Impact Resistant Plastic & Metal",
+      size: "100mm / 4 inch disc",
+      application: "Fabrication, Construction, Maintenance",
+      brand: "Bosch / Makita"
+    },
+    image: "/images/grinder.jpg"
   },
   {
-    id: "1082A",
-    name: "SALASAR Ductile Iron Dual Plate (Wafer Type) Check Valve, PN 16",
-    description: "With S.S 304 Disc and Nitrile Rubber Lining. Shell Test Pressure - 24 Bar, Seat Test Pressure - 17.6 Bar",
-    hsnCode: "84813000",
-    category: "Valves",
-    image: "/images/cast-iron-valve.png",
-    specs: [
-      { sizeInch: "2", nbMm: "50", weightKg: "5.576", pn: "12", lMm: "200", rateInr: "48,547" },
-      { sizeInch: "3", nbMm: "80", weightKg: "6.987", pn: "16", lMm: "400", rateInr: "1,06,835" }
-    ]
+    id: "t-002",
+    name: "Industrial Torque Wrench",
+    category: "Industrial Tools",
+    price: "₹2,500 - ₹12,000 / Unit",
+    description: "Precision adjustable torque wrench for accurate tightening of critical fasteners.",
+    specs: {
+      material: "Chrome Vanadium Steel",
+      size: "1/2 inch drive, 20-200 Nm",
+      application: "Automotive Repair, Heavy Machinery"
+    },
+    image: "/images/wrench.jpg"
+  },
+
+  // Pipes & Fittings
+  {
+    id: "p-001",
+    name: "GI Pipe Class B & C",
+    category: "Pipes & Fittings",
+    price: "₹80 - ₹450 / Meter",
+    description: "Hot-dipped galvanized iron pipes offering excellent corrosion resistance for water and gas lines.",
+    specs: {
+      material: "Galvanized Iron",
+      size: "1/2 inch to 6 inch",
+      application: "Plumbing, Irrigation, Structural",
+      brand: "Tata / Jindal"
+    },
+    image: "/images/gi-pipe.jpg"
   },
   {
-    id: "1078",
-    name: "SALASAR Butterfly Valve (Wafer Type), PN 1.6 with S.G Iron Disc",
-    description: "Body S.G Iron, Lever Operated, Nitrile / EPDM Rubber Lining.",
-    hsnCode: "84818030",
-    category: "Valves",
-    image: "/images/cast-iron-valve.png",
-    specs: [
-      { sizeInch: "1 1/2", nbMm: "40", weightKg: "3.110", rateInr: "3,490" },
-      { sizeInch: "2", nbMm: "50", weightKg: "3.507", rateInr: "5,086" },
-      { sizeInch: "3", nbMm: "80", weightKg: "4.037", rateInr: "14,473" }
-    ]
+    id: "p-002",
+    name: "HDPE Coil Pipe",
+    category: "Pipes & Fittings",
+    price: "₹45 - ₹120 / Meter",
+    description: "Flexible, high-density polyethylene pipes for underground water supply and irrigation systems.",
+    specs: {
+      material: "High-Density Polyethylene (HDPE)",
+      size: "20mm to 110mm",
+      application: "Agriculture, Water Supply, Telecom Ducting"
+    },
+    image: "/images/hdpe-pipe.jpg"
+  },
+
+  // Construction Materials
+  {
+    id: "c-001",
+    name: "TMT Rebars (FE 500D)",
+    category: "Construction Materials",
+    price: "Get Latest Price",
+    description: "High-strength ribbed TMT bars for reinforced concrete structures ensuring seismic resistance.",
+    specs: {
+      material: "Thermo Mechanically Treated Steel",
+      size: "8mm to 32mm",
+      application: "Building Construction, Bridges, Dams",
+      brand: "SAIL / Tata Tiscon"
+    },
+    image: "/images/tmt-bar.jpg"
   },
   {
-    id: "gi-pipes",
-    name: "Galvanized Iron (GI) Pipes",
-    description: "High-quality GI pipes for reliable fluid transportation in diverse industrial environments.",
-    hsnCode: "73069090",
-    category: "Pipes",
-    image: null,
-    specs: []
+    id: "c-002",
+    name: "Concrete Cover Blocks",
+    category: "Construction Materials",
+    price: "₹2 - ₹15 / Piece",
+    description: "Durable concrete spacers to maintain proper rebar cover in reinforced concrete elements.",
+    specs: {
+      material: "High Strength Concrete",
+      size: "20mm, 25mm, 40mm, 50mm",
+      application: "Slabs, Columns, Footings"
+    },
+    image: "/images/cover-block.jpg"
+  },
+
+  // Hardware Accessories
+  {
+    id: "h-001",
+    name: "Heavy Duty Door Hinges",
+    category: "Hardware Accessories",
+    price: "₹80 - ₹350 / Pair",
+    description: "Premium stainless steel bearing hinges for smooth operation of heavy commercial doors.",
+    specs: {
+      material: "SS 304",
+      size: "4 inch, 5 inch",
+      application: "Commercial Buildings, Residential Doors"
+    },
+    image: "/images/hinge.jpg"
   },
   {
-    id: "hdpe-pipes",
-    name: "HDPE Polyethylene Water Pipes",
-    description: "Durable and flexible HDPE pipes ideal for irrigation and underground installations.",
-    hsnCode: "39172110",
-    category: "Pipes",
-    image: null,
-    specs: []
-  },
-  {
-    id: "astral-fittings",
-    name: "Astral PVC & UPVC Fittings",
-    description: "Complete range of Astral Tees, Bends, and Elbows for secure and leak-proof connections.",
-    hsnCode: "39174000",
-    category: "Fittings",
-    image: null,
-    specs: []
+    id: "h-002",
+    name: "Industrial Padlocks",
+    category: "Hardware Accessories",
+    price: "₹450 - ₹1,800 / Unit",
+    description: "High-security brass padlocks with hardened steel shackles for maximum protection.",
+    specs: {
+      material: "Solid Brass & Hardened Steel",
+      size: "50mm, 65mm",
+      application: "Warehouses, Gates, Shutters",
+      brand: "Godrej / Harrison"
+    },
+    image: "/images/padlock.jpg"
   }
 ];
