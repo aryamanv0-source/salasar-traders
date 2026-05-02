@@ -1,66 +1,77 @@
+import Link from "next/link";
 import Image from "next/image";
-import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
+    <div className="container">
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+          <span className="badge">Premium Industrial Solutions</span>
+          <h1>Quality Valves. <br/><span className="text-gradient">Trusted Solutions.</span></h1>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Salasar Traders is a leading wholesaler and distributor of premium pipe fittings, HDPE pipes, and state-of-the-art industrial valves in Nagpur, India.
           </p>
+          <div className="hero-actions">
+            <Link href="/products" className="btn-primary">
+              <span>View Products</span>
+            </Link>
+            <Link href="/contact" className="btn-secondary">
+              Contact Us
+            </Link>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Featured Categories */}
+      <section className="mb-4">
+        <h2 className="text-center mb-2">Our Top Categories</h2>
+        <div className="grid grid-cols-3">
+          <div className="glass-panel text-center">
+            <h3>Industrial Valves</h3>
+            <p className="mb-1 text-secondary">Cast Iron, Bronze, and Ductile Iron check, gate, and ball valves.</p>
+            <Link href="/products" className="btn-secondary" style={{ fontSize: '0.8rem', padding: '0.5rem 1rem' }}>Explore Valves</Link>
+          </div>
+          
+          <div className="glass-panel text-center">
+            <h3>HDPE & GI Pipes</h3>
+            <p className="mb-1 text-secondary">Durable Polyethylene and Galvanized Iron pipes for industrial use.</p>
+            <Link href="/products" className="btn-secondary" style={{ fontSize: '0.8rem', padding: '0.5rem 1rem' }}>View Pipes</Link>
+          </div>
+          
+          <div className="glass-panel text-center">
+            <h3>Pipe Fittings</h3>
+            <p className="mb-1 text-secondary">A wide range of Astral tees, bends, elbows, and ACC cover blocks.</p>
+            <Link href="/products" className="btn-secondary" style={{ fontSize: '0.8rem', padding: '0.5rem 1rem' }}>See Fittings</Link>
+          </div>
         </div>
-      </main>
+      </section>
+      
+      {/* Testimonials / Stats */}
+      <section className="mb-4">
+        <div className="glass-panel text-center" style={{ padding: '4rem 2rem' }}>
+          <h2 className="text-gradient mb-1">9+ Years of Excellence</h2>
+          <p className="text-secondary mb-2">Serving countless industries with precision-engineered products and leak-proof performance.</p>
+          <div className="grid grid-cols-4" style={{ marginTop: '3rem' }}>
+            <div>
+              <h3 className="text-gradient">Premium</h3>
+              <p>Quality</p>
+            </div>
+            <div>
+              <h3 className="text-gradient">Reliable</h3>
+              <p>Performance</p>
+            </div>
+            <div>
+              <h3 className="text-gradient">Precision</h3>
+              <p>Engineered</p>
+            </div>
+            <div>
+              <h3 className="text-gradient">100%</h3>
+              <p>Satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
