@@ -35,7 +35,7 @@ export const products: Product[] = [
       application: "Construction, Automotive, Machinery",
       brand: "Salasar Fasteners"
     },
-    image: "/images/fastener.jpg"
+    image: "https://images.unsplash.com/photo-1588612140409-a1b635b71db3?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "f-002",
@@ -48,7 +48,7 @@ export const products: Product[] = [
       size: "M3 to M24",
       application: "Automotive, Aerospace, Manufacturing"
     },
-    image: "/images/nut.jpg"
+    image: "https://images.unsplash.com/photo-1534073133331-c4f6fb87c88b?auto=format&fit=crop&q=80&w=800"
   },
   
   // Industrial Tools
@@ -64,7 +64,7 @@ export const products: Product[] = [
       application: "Fabrication, Construction, Maintenance",
       brand: "Bosch / Makita"
     },
-    image: "/images/grinder.jpg"
+    image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "t-002",
@@ -77,7 +77,7 @@ export const products: Product[] = [
       size: "1/2 inch drive, 20-200 Nm",
       application: "Automotive Repair, Heavy Machinery"
     },
-    image: "/images/wrench.jpg"
+    image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&q=80&w=800"
   },
 
   // Pipes & Fittings
@@ -93,7 +93,7 @@ export const products: Product[] = [
       application: "Plumbing, Irrigation, Structural",
       brand: "Tata / Jindal"
     },
-    image: "/images/gi-pipe.jpg"
+    image: "https://images.unsplash.com/photo-1584824388177-3bd48bc62590?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "p-002",
@@ -106,7 +106,7 @@ export const products: Product[] = [
       size: "20mm to 110mm",
       application: "Agriculture, Water Supply, Telecom Ducting"
     },
-    image: "/images/hdpe-pipe.jpg"
+    image: "https://images.unsplash.com/photo-1610448161749-3694f47565c5?auto=format&fit=crop&q=80&w=800"
   },
 
   // Construction Materials
@@ -122,7 +122,7 @@ export const products: Product[] = [
       application: "Building Construction, Bridges, Dams",
       brand: "SAIL / Tata Tiscon"
     },
-    image: "/images/tmt-bar.jpg"
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "c-002",
@@ -135,7 +135,7 @@ export const products: Product[] = [
       size: "20mm, 25mm, 40mm, 50mm",
       application: "Slabs, Columns, Footings"
     },
-    image: "/images/cover-block.jpg"
+    image: "https://images.unsplash.com/photo-1590496839352-7cd1ec9bb617?auto=format&fit=crop&q=80&w=800"
   },
 
   // Hardware Accessories
@@ -150,7 +150,7 @@ export const products: Product[] = [
       size: "4 inch, 5 inch",
       application: "Commercial Buildings, Residential Doors"
     },
-    image: "/images/hinge.jpg"
+    image: "https://images.unsplash.com/photo-1616423019803-b0f329986bfa?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: "h-002",
@@ -164,6 +164,6 @@ export const products: Product[] = [
       application: "Warehouses, Gates, Shutters",
       brand: "Godrej / Harrison"
     },
-    image: "/images/padlock.jpg"
+    image: "https://images.unsplash.com/photo-1558000143-a609d9b626e2?auto=format&fit=crop&q=80&w=800"
   }
 ];
